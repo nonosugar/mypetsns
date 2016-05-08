@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'users/show/:id'=> 'users#show',as:'usershow'
 
  
@@ -9,8 +10,15 @@ Rails.application.routes.draw do
   
 
   root 'home#top'
+
+
+  resources :notes
+  
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
+  # See how all your rountes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
