@@ -1,0 +1,8 @@
+<h1>Home#top</h1>
+<p>Find me in app/views/home/top.html.erb</p>
+
+
+
+<% if user_signed_in? %>
+<%= link_to current_user.name, usershow_path(current_user.id) %>
+<% end %>
