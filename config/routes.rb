@@ -1,8 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'users/show/:id'=> 'users#show',as:'usershow'
+
+ 
+
+  get 'home/top'
+
+  devise_for :users
+  
+
+  root 'home#top'
+
+
   resources :notes
-  resources :notes
-  root :to => 'notes#new'
+  
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your rountes lay out with "rake routes".
