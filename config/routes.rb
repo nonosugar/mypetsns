@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :notes
+  resources :notes
   root :to => 'notes#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
