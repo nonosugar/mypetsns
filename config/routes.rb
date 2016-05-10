@@ -5,6 +5,7 @@ Rails.application.routes.draw do
  
 
   get 'home/top'
+  
 
   devise_for :users
   
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
 
   resources :notes
   
-  
+  resources :pets,only:[:create,:new,:show]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
