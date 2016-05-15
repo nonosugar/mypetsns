@@ -6,3 +6,5 @@
 <% if user_signed_in? %>
 <%= link_to current_user.name, usershow_path(current_user.id) %>
 <% end %>
+
+<%= link_to '新規投稿',new_note_path%>

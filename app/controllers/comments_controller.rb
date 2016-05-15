@@ -1,9 +1,17 @@
 class CommentsController < ApplicationController
-	def commentscreate
-		@note = Note.find(params[note_id])
-		@comment = current_user.comment.build(note_id:@note.id)
-		@comment.save
+	# def create
+	# 	@note = Note.find(params[:note_id])
+	# 	@comment = current_user.comments.build(note_id: @note.id)
+	# 	@comment.save
+	# 	@comments = @note.comments
+	# 	render 'notes/show'
+	# end
 
-		render 'notes/show'
+		def commentscreate
+	  @note = Note.find(params[:note_id])
+	  @comment = current_user.comments.build(note_id:@note.id)
+	  @comment.content = params[:content]
+	  @comment.save
+	  render 'notes/show'
 	end
 end
