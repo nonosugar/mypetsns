@@ -3,3 +3,8 @@
 
 <%= @user.name %>
 <%= @user.email %>
+
+
+<%= @user.notes.each do |note|%>
+	<%= link_to note.title ,%>
+<%end%>
