@@ -12,9 +12,9 @@ Rails.application.routes.draw do
   root 'home#top'
 
 
-  resources :notes
+  resources :notes 
   
-  
+  post 'comments/commentscreate/:note_id' => 'comments#commentscreate', as: 'comment'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

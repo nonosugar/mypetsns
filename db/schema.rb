@@ -11,8 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160508093636) do
+ActiveRecord::Schema.define(version: 20160508105536) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "content"
+    t.integer  "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.text     "content"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "pets", force: :cascade do |t|
     t.string   "name"
@@ -21,20 +37,10 @@ ActiveRecord::Schema.define(version: 20160508093636) do
     t.string   "image"
     t.text     "phrase"
     t.integer  "user_id"
-=======
-ActiveRecord::Schema.define(version: 20160508092723) do
-
-  create_table "notes", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "user_id"
-    t.text     "content"
-    t.string   "image"
->>>>>>> 424d1358f68ba52d6e3d5f2d28ab7df7afbc1d1b
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -55,6 +61,4 @@ ActiveRecord::Schema.define(version: 20160508092723) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
-=======
->>>>>>> 424d1358f68ba52d6e3d5f2d28ab7df7afbc1d1b
 end

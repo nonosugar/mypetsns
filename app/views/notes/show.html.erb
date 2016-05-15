@@ -22,3 +22,20 @@
 
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>
+
+<% @note.comments.each do |comment|%>
+	<%= comment.content%>
+<%end%>
+
+<%= form_tag comment_path(@note.id) do %>
+  
+  コメント
+  <textarea name="content"></textarea>
+  <input type="submit" value="投稿する">
+<% end %>
+
+<% if @comments %>
+<% @note.comments.each do |comment| %>
+   <%= comment.content %>
+<% end %>
+<% end %>
