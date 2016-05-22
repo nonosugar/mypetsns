@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   delete 'comments/commentsdestroy/:comment_id' => 'comments#commentsdestroy', as: 'commentsdes'
 
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your rountes lay out with "rake routes".
