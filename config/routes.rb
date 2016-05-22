@@ -2,18 +2,19 @@ Rails.application.routes.draw do
 
   get 'users/show/:id'=> 'users#show',as:'usershow'
 
- 
-
   get 'home/top'
   
 
   devise_for :users
   
+ root 'home#top'
 
-  root 'home#top'
+ resources :notes 
+  
+  post 'comments/commentscreate/:note_id' => 'comments#commentscreate', as: 'comment'
 
+  delete 'comments/commentsdestroy/:comment_id' => 'comments#commentsdestroy', as: 'commentsdes'
 
-  resources :notes
   
   resources :pets,only:[:create,:new,:show]
 
