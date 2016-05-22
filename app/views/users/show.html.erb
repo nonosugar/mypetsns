@@ -3,3 +3,12 @@
 
 <%= @user.name %>
 <%= @user.email %>
+
+
+<% @user.notes.each do |note|%>
+	<%= link_to note.title, note_path(note.id) %>
+<% end %>
+
+<%= link_to 'home', root_path %>
+<%= link_to 'note', notes_path %>
+

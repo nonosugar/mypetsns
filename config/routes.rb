@@ -2,19 +2,19 @@ Rails.application.routes.draw do
 
   get 'users/show/:id'=> 'users#show',as:'usershow'
 
- 
-
   get 'home/top'
 
   devise_for :users
   
+ root 'home#top'
 
-  root 'home#top'
-
-
-  resources :notes 
+ resources :notes 
   
   post 'comments/commentscreate/:note_id' => 'comments#commentscreate', as: 'comment'
+
+  delete 'comments/commentsdestroy/:comment_id' => 'comments#commentsdestroy', as: 'commentsdes'
+
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.
