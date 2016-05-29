@@ -5,10 +5,13 @@
 <%= @user.email %>
 
 
+<% @user.pets.each do |pet| %>
+ <%= link_to pet.name,pet_path(pet.id) %>
+<% end %>
+
 <% @user.notes.each do |note|%>
 	<%= link_to note.title, note_path(note.id) %>
 <% end %>
 
 <%= link_to 'home', root_path %>
 <%= link_to 'note', notes_path %>
-

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'users/show/:id'=> 'users#show',as:'usershow'
 
   get 'home/top'
+  
 
   devise_for :users
   
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
   delete '/likes/destroy/:note_id' => 'likes#destroy', as: 'likesdestroy'
 
   
+  resources :pets,only:[:create,:new,:show]
 
 
   # The priority is based upon order of creation: first created -> highest priority.

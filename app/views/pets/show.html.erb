@@ -1,0 +1,10 @@
+
+飼い主名<%= link_to @pet.user.name,usershow_path(@pet.user.id) %>
+
+ペットの名前<%= @pet.name %>
+
+年齢<%= @pet.age %>
+
+タイプ<%= @pet.pettype%>
+
+一言<%= @pet.phrase %>
