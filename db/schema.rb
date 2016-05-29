@@ -11,7 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 20160529074637) do
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id"
+    t.text     "content"
+    t.integer  "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+=======
 ActiveRecord::Schema.define(version: 20160509154938) do
+>>>>>>> 9179cf6dd052c4edc7d45e20f242a92afa7b861a
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "note_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "notes", force: :cascade do |t|
     t.string   "title"
