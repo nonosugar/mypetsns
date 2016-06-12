@@ -39,12 +39,14 @@
    <% end %>
 <% end %>
 
-<% if !current_user.likes.find_by(note_id:@note.id)%>
-  <%= link_to 'いいね', likescreate_path(@note.id) %>
-<% else %>
-  <%= link_to 'いいね外す', likesdestroy_path(@note.id), method: :delete %>
-<% end %>
 
+<div id = "like_link">
+  <%= render 'likes/likelike', note:@note %>
+</div>
+
+<div id = "likecount">
+  <%= @note.likes.count %>
+</div>
 
 
 

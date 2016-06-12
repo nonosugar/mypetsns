@@ -11,8 +11,8 @@ class PetsController < ApplicationController
 		@pet.save
 		render :show
 	end 
+	
 	def show
-
 		
 	end
 

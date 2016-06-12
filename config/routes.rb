@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   delete '/likes/destroy/:note_id' => 'likes#destroy', as: 'likesdestroy'
 
   
+
+  
   resources :pets,only:[:create,:new,:show]
 
 
