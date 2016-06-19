@@ -1,17 +1,19 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
 
-<%= @user.name %>
-<%= @user.email %>
+<div class="user_show">
+	<h2>マイページ</h2>
+
+	<p><%= @user.name %></p>
+	<p><%= @user.email %></p>
+	<p><%= @user.id%></p>
 
 
-<% @user.pets.each do |pet| %>
- <%= link_to pet.name,pet_path(pet.id) %>
-<% end %>
+	<% @user.pets.each do |pet| %>
+	 <%= link_to pet.name,pet_path(pet.id) %>
+	<% end %>
 
-<% @user.notes.each do |note|%>
-	<%= link_to note.title, note_path(note.id) %>
-<% end %>
-
+	<% @user.notes.each do |note|%>
+		<%= link_to note.title, note_path(note.id) %>
+	<% end %>
+</div>
 <%= link_to 'home', root_path %>
 <%= link_to 'note', notes_path %>

@@ -11,24 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160509154938) do
+ActiveRecord::Schema.define(version: 20160616132020) do
 
-  create_table "notes", force: :cascade do |t|
-    t.string   "title"
-    t.integer  "user_id"
+  create_table "answers", force: :cascade do |t|
     t.text     "content"
-    t.string   "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "pets", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.string   "pettype"
-    t.string   "image"
-    t.text     "phrase"
     t.integer  "user_id"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -48,6 +38,25 @@ ActiveRecord::Schema.define(version: 20160509154938) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pets", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.string   "pettype"
+    t.string   "image"
+    t.text     "phrase"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "best_a"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -64,6 +73,8 @@ ActiveRecord::Schema.define(version: 20160509154938) do
     t.string   "image"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -12,4 +12,71 @@
  *
  *= require_tree .
  *= require_self
+ *= require jquery.bxslider.css
+ *= require jquery.bxslider.min.css
  */
+
+ *{
+ 	margin: 0px;
+ 	padding: 0px;
+ }
+body{
+	margin-top: -20px;
+	border-left: 10px solid yellow;
+	border-right: 10px solid yellow;
+}
+.apporange{
+	background-color: white;
+    height: 1000px;
+
+}
+.applogo{
+	background-color: white;
+	display: block;
+	
+	position: fixed;
+	height: 200px;
+	width: 200px;
+    padding: 30px;
+    z-index: 3;
+    left: 600px;
+
+}
+header{
+	
+	color: black;
+	position: fixed;
+	/*background-color: white;*/
+	width: 1000px;
+	margin-left: 200px;
+	margin-top: 20px;
+	
+	z-index: 6;
+}
+header ul{
+	 
+}
+header li{
+	list-style: none;
+	float: left;
+	line-height: 50px;
+	font-size: 15px;
+	margin-left: 150px;
+	margin-top: 150px;
+	
+	
+}
+header li:hover{
+	background: none;
+	color: skyblue;
+	border-bottom: 1px solid skyblue;
+}
+header .backclear{
+	background: none;
+	text-decoration: none;
+	
+}
+header .backclear:hover{
+	
+	color: skyblue;
+}
