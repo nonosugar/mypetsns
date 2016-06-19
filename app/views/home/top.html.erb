@@ -1,11 +1,27 @@
-<h1>Home#top</h1>
-<p>Find me in app/views/home/top.html.erb</p>
-<%= link_to 'newpet',new_pet_path %>
+<div class="hometopload">
+	<%= image_tag '/images/whitelogo.png',class:'homelogo'%>
+</div>
 
 
-<% if user_signed_in? %>
-<%= link_to current_user.name, usershow_path(current_user.id) %>
-<% end %>
+<div class="homecontentall">
 
-<%= link_to '新規投稿',new_note_path%>
-<%= link_to 'note', notes_path %>
+    <ul class="bxslider fontsize">
+    	<li><div class="bg1"></div></li>
+    	<li><div class="bg2"></div></li>
+    	<li><div class="bg3"></div></li>
+    </ul>
+
+
+	
+
+
+	<ul class="homeim">
+	<li><%= image_tag '/images/gi01a201503310000.png',class:'homeimage'%></li>
+	<li><%= image_tag '/images/gi01a201503310000.png',class:'homeimage'%></li>
+	<li><%= image_tag '/images/gi01a201503310000.png',class:'homeimage'%></li>
+
+	</ul>
+
+
+</div>
+

@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @question.content %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @question.user.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p>
+
+
+<% unless @question.best_a.nil? %>
+   ベストアンサー
+   <%= @answer.content %>
+   <% if current_user == @question.user %><br>
+   <%= link_to 'ベストアンサーさ駆除',best_destroy_path(@answer.id)%>
+   <% end %>
+<% end %>
+
+<div class="answer_area">
+<%= form_tag answers_create_path(@question.id) do %>
+  
+  answer
+  <textarea name="content"></textarea>
+
+  <input type="submit" value="投稿する">
+<% end %>
+
+  <div class="answer_zone">
+  	<% @question.answers.each do |answer|%>
+  	  <%= answer.content %>
+      <% if @question.user_id == current_user.id&&@question.best_a==nil %>
+        <%= link_to 'bestアンサーに選ぶ',best_answer_path(answer.id)%>
+      <% end %>
+      <%= link_to '削除',answers_destroy_path(answer.id),method: :delete%>
+  	<% end %>
+  </div>
+</div>
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', questions_path %>

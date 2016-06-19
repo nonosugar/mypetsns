@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
 
+  post 'answers/create/:question_id' => 'answers#create', as:'answers_create'
+  delete 'answers/destroy/:id' => 'answers#destroy', as:'answers_destroy'
+  get 'questions/best_answer/:answer_id' => 'questions#best_answer',as:'best_answer'
+  get 'questions/best_destroy/:answer_id' => 'questions#best_destroy',as:'best_destroy'
+  
+  resources :questions
   get 'users/show/:id'=> 'users#show',as:'usershow'
 
   get 'home/top'
   
 
-  devise_for :users
+  devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
+    controllers: { omniauth_callbacks: "omniauth_callbacks" }
   
  root 'home#top'
 
