@@ -17,3 +17,7 @@
 </div>
 <%= link_to 'home', root_path %>
 <%= link_to 'note', notes_path %>
+
+<div class = "follow">
+ <%= render 'users/followrelate', user:@user %>
+</div>

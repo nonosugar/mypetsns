@@ -27,8 +27,8 @@
 <%= form_tag comment_path(@note.id) do %>
   
   コメント
-  <textarea name="content"></textarea>
-  <input type="submit" value="投稿する">
+  <textarea name="content" required="required"></textarea>
+  <input type="submit" value="投稿する" >
 <% end %>
 
 
@@ -38,3 +38,18 @@
    <%= link_to '削除', commentsdes_path(comment.id), method: :delete %>
    <% end %>
 <% end %>
+
+
+<div id = "like_link">
+  <%= render 'likes/likelike', note:@note %>
+</div>
+
+<div id = "likecount">
+  <%= @note.likes.count %>
+</div>
+
+
+
+
+
+

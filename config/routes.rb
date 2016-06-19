@@ -22,6 +22,14 @@ Rails.application.routes.draw do
 
   delete 'comments/commentsdestroy/:comment_id' => 'comments#commentsdestroy', as: 'commentsdes'
 
+  get '/likes/create/:note_id' => 'likes#create', as: 'likescreate'
+
+  delete '/likes/destroy/:note_id' => 'likes#destroy', as: 'likesdestroy'
+
+  get 'users/relationsave/:user_id' => 'users#relationsave', as: 'relationsave'
+
+  delete 'users/relationdestroy/:user_id' => 'users#relationdestroy', as: 'relationdestroy'
+
   
   resources :pets,only:[:create,:new,:show]
 
