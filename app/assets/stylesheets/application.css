@@ -25,12 +25,10 @@ body{
 	border-left: 10px solid yellow;
 	border-right: 10px solid yellow;*/
 }
-<<<<<<< HEAD
-.apporange{
-	background-color: orange;
-    height: 1000px;
 
-=======
+
+
+
 .wrapper{
 	background-image: url("/images/GAK86_morumotto.jpg") ;
 	background-size: cover;
@@ -45,15 +43,14 @@ body{
 	font-size: 100px;
 	margin-top: 0px;
 	letter-spacing: 5px;
->>>>>>> bacbbfc60e5b936bcc27e044fc974300c0e27bbc
+
 }
 
 .applogo{
-<<<<<<< HEAD
-	background-color: orange;
-=======
+
+
+
 	background-color: #FF9966;
->>>>>>> bacbbfc60e5b936bcc27e044fc974300c0e27bbc
 	display: block;
 	position: fixed;
 	height: 100px;
@@ -64,11 +61,7 @@ body{
     margin-top: 10px;
     border-radius: 100px;
 }
-.appcontent{
-	position: relative;
-	top: 500px;
-	left: 500px;
-}
+
 header{
 	
 	color: black;
