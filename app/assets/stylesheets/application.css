@@ -25,6 +25,13 @@ body{
 	border-left: 10px solid yellow;
 	border-right: 10px solid yellow;*/
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> fe12fadef8c8c67c215c2da52b4fa5546bb8c4bf
 .wrapper{
 	background-image: url("/images/GAK86_morumotto.jpg") ;
 	background-size: cover;
@@ -39,10 +46,21 @@ body{
 	font-size: 100px;
 	margin-top: 0px;
 	letter-spacing: 5px;
+<<<<<<< HEAD
 }
 
 .applogo{
 	/*background-color: #FF9966;*/
+=======
+
+}
+
+.applogo{
+
+
+
+	background-color: #FF9966;
+>>>>>>> fe12fadef8c8c67c215c2da52b4fa5546bb8c4bf
 	display: block;
 	position: fixed;
 	height: 100px;
@@ -54,8 +72,13 @@ body{
     border-radius: 100px;
 }
 
+<<<<<<< HEAD
 
 header{	
+=======
+header{
+	
+>>>>>>> fe12fadef8c8c67c215c2da52b4fa5546bb8c4bf
 	color: black;
 	position: fixed;
 	/*background-color: white;*/
