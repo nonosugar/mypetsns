@@ -24,6 +24,8 @@ body{
 	/*margin-top: -20px;
 	border-left: 10px solid yellow;
 	border-right: 10px solid yellow;*/
+	background-image: url('/images/wood-texture_00080.jpg');
+	background-size: cover;
 }
 
 
@@ -109,7 +111,7 @@ header .backclear:hover{
 .form_all{
 	width: 700px;
     box-shadow: 5px 5px skyblue;
-	display: inline-block;
+	
 	margin: 0 auto;
 	background-color: blue;
 	padding: 30px;
@@ -122,5 +124,18 @@ header .backclear:hover{
 	background: chocolate;
 	width: 100%;
 	height: 400px;
+}
+.login_form{
+	margin: 0 auto;
+	position: relative;
+	padding: 30px;
+	top: 150px;
+	width: 700px;
+	height: 500px;
+	border-radius: 10px;
+	border: 3px solid white;
+	box-shadow: 5px 5px 3px white;
+	background-color:  #FF9966;
+	color: white;
 }
 
