@@ -2,14 +2,23 @@
 <div class="user_show">
 	<h2>マイページ</h2>
 
-	<p><%= @user.name %></p>
-	<p><%= @user.email %></p>
-	<p><%= @user.id%></p>
+	<p>名前：<%= @user.name %></p>
+	<p>eメールアドレス：<%= @user.email %></p>
 
+    
+
+    <% if @user.image? %>
+      <%= image_tag @user.image.thumb.url,class:'user_images img-thumbnail' %>
+    <% else %>
+      <%= image_tag '/images/logo (2).png',class:'user_images img-thumbnail'%>
+    <% end %><br>
+      
+    <%= link_to '編集する',edit_user_registration_path %>
 
 	<% @user.pets.each do |pet| %>
 	 <%= link_to pet.name,pet_path(pet.id) %>
 	<% end %>
+	<%= link_to '新しいペットを登録する',new_pet_path%>
 
 	<% @user.notes.each do |note|%>
 		<%= link_to note.title, note_path(note.id) %>
@@ -18,6 +27,9 @@
 <%= link_to 'home', root_path %>
 <%= link_to 'note', notes_path %>
 
+<% unless @user.id==current_user.id %>
 <div class = "follow">
  <%= render 'users/followrelate', user:@user %>
 </div>
+<% end %>
+

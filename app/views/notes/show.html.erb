@@ -1,23 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>記事タイトル:</strong>
   <%= @note.title %>
 </p>
+<div id = "like_link">
+  <%= render 'likes/likelike', note:@note %>
+</div>
+
+<div id = "likecount">
+  <%= @note.likes.count %>
+</div>
 
 <p>
-  <strong>User:</strong>
+  <strong>投稿者:</strong>
   <%= @note.user_id %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>内容:</strong>
   <%= @note.content %>
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @note.image %>
+  <strong>写真:</strong>
+   <%= image_tag @note.image.thumb.url %>
+
 </p>
 
 <%= link_to 'Edit', edit_note_path(@note) %> |
@@ -40,13 +48,7 @@
 <% end %>
 
 
-<div id = "like_link">
-  <%= render 'likes/likelike', note:@note %>
-</div>
 
-<div id = "likecount">
-  <%= @note.likes.count %>
-</div>
 
 
 
