@@ -1,10 +1,14 @@
 
-飼い主名<%= link_to @pet.user.name,usershow_path(@pet.user.id) %>
+<h2>マイペットページ</h2>
 
-ペットの名前<%= @pet.name %>
+飼い主名<%= link_to @pet.user.name,usershow_path(@pet.user.id) %><br>
 
-年齢<%= @pet.age %>
+ペットの名前<%= @pet.name %><br>
 
-タイプ<%= @pet.pettype%>
+<%= image_tag @pet.image.thumb.url,class:'img-thumbnail' %><br>
 
-一言<%= @pet.phrase %>
+年齢<%= @pet.age %><br>
+
+タイプ<%= @pet.pettype%><br>
+
+一言<%= @pet.phrase %><br>

@@ -7,6 +7,31 @@
 	background-color: red;
 }
 .q_index{
-	position: relative;
-	top: 300px;
+	background-color: #33FF99;
+	width: 800px;
+	border-radius: 10px;
+	border: 5px solid green;
+	padding: 30px;
+	color: white;
+}
+.index_border{
+	border-bottom: 2px solid green;
+	padding-bottom: 10px;
+}
+.question_create{
+	float: right;
+}
+.hover_none:hover{
+	background: none;
+	text-decoration: none;
+}
+.question_show_u{
+	font-size: 15px;
+
+}
+.question_show_c{
+	font-size: 20px;
+}
+.question_show_t{
+	font-size: 30px;
 }

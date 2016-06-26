@@ -33,19 +33,18 @@ $(function(){
 	});
 
     $(document).on('page:change', function(event) {
-	setTimeout(function(){
-	$('.hometopload').fadeOut(2000);
-	setTimeout(function(){
-
-  
-	$('.homecontentall').fadeIn();
-
-	},2000);
-	},2000);
+	  setTimeout(function(){
+	    $('.hometopload').fadeOut(2000);
+	      
+	  },2000);
 	});
 
 	$(document).ready(function(){
-	  $('.bxslider').bxSlider({auto:true});
+	  $('.bxslider').bxSlider({
+	  	auto:true,
+	  	mode: 'fade'
+	  });
+	   
 	  });
 	
 });

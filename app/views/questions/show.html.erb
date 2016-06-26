@@ -1,20 +1,28 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @question.content %>
-</p>
 
-<p>
-  <strong>User:</strong>
-  <%= @question.user.name %>
-</p>
 
-<p>
-  <strong>Title:</strong>
+
+
+<p class="question_show_t">
+  <strong>:</strong>
   <%= @question.title %>
 </p>
 
+
+
+<p class="question_show_u">
+  <strong>投稿者:</strong>
+  <%= @question.user.name %>
+</p>
+
+
+
+<%= image_tag @question.image.thumb.url,class:'img-thumbnail' %><br>
+
+<p class="question_show_c">
+  <strong>内容:</strong>
+  <%= @question.content %>
+</p>
 
 <% unless @question.best_a.nil? %>
    ベストアンサー
