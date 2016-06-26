@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160616132020) do
 
   create_table "answers", force: :cascade do |t|
@@ -29,19 +28,23 @@ ActiveRecord::Schema.define(version: 20160616132020) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-=======
-ActiveRecord::Schema.define(version: 20160529110146) do
->>>>>>> 8867828f51c0b3307c1ca719b74b189c957813a5
 
-  create_table "comments", force: :cascade do |t|
+  create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
-    t.text     "content"
     t.integer  "note_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-<<<<<<< HEAD
+  create_table "notes", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.text     "content"
+    t.string   "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "pets", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
@@ -49,11 +52,6 @@ ActiveRecord::Schema.define(version: 20160529110146) do
     t.string   "image"
     t.text     "phrase"
     t.integer  "user_id"
-=======
-  create_table "likes", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "note_id"
->>>>>>> 8867828f51c0b3307c1ca719b74b189c957813a5
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -67,19 +65,6 @@ ActiveRecord::Schema.define(version: 20160529110146) do
     t.integer  "best_a"
   end
 
-<<<<<<< HEAD
-=======
-  create_table "pets", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "age"
-    t.string   "pettype"
-    t.string   "image"
-    t.text     "phrase"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "relationships", force: :cascade do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -87,7 +72,6 @@ ActiveRecord::Schema.define(version: 20160529110146) do
     t.datetime "updated_at",  null: false
   end
 
->>>>>>> 8867828f51c0b3307c1ca719b74b189c957813a5
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

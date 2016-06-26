@@ -21,26 +21,37 @@
  	padding: 0px;
  }
 body{
-	margin-top: -20px;
+	/*margin-top: -20px;
 	border-left: 10px solid yellow;
-	border-right: 10px solid yellow;
+	border-right: 10px solid yellow;*/
 }
-.apporange{
-	background-color: white;
-    height: 1000px;
+.wrapper{
+	background-image: url("/images/GAK86_morumotto.jpg") ;
+	background-size: cover;
+	width: 100%;
+    height: 600px;
+}
+.wrapper h1{
+	color: chocolate;
+	margin-left: 550px;
+	line-height: 600px;
+	font-family: impact;
+	font-size: 100px;
+	margin-top: 0px;
+	letter-spacing: 5px;
+}
 
-}
 .applogo{
-	background-color: white;
+	background-color: #FF9966;
 	display: block;
-	
 	position: fixed;
-	height: 200px;
-	width: 200px;
-    padding: 30px;
+	height: 100px;
+	width: 165px;
+    padding: 20px;
     z-index: 3;
-    left: 600px;
-
+    left: 10px;
+    margin-top: 10px;
+    border-radius: 100px;
 }
 header{
 	
@@ -48,35 +59,41 @@ header{
 	position: fixed;
 	/*background-color: white;*/
 	width: 1000px;
-	margin-left: 200px;
-	margin-top: 20px;
-	
+	margin-left: 350px;
+	margin-top: 0px;
 	z-index: 6;
+	color: white;
+	font-family: arial black;
 }
 header ul{
 	 
 }
 header li{
 	list-style: none;
-	float: left;
+	float: right;
 	line-height: 50px;
 	font-size: 15px;
-	margin-left: 150px;
-	margin-top: 150px;
-	
-	
+	margin-left: 20px;
+	margin-top: 10px;
+	padding-bottom: -15px;	
 }
 header li:hover{
 	background: none;
-	color: skyblue;
-	border-bottom: 1px solid skyblue;
+	color: chocolate;
+	border-bottom: 5px solid chocolate;
 }
 header .backclear{
 	background: none;
 	text-decoration: none;
+	color: white;
 	
 }
 header .backclear:hover{
-	
-	color: skyblue;
+	color: chocolate;
 }
+.content{
+	background: chocolate;
+	width: 100%;
+	height: 400px;
+}
+

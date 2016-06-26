@@ -9,9 +9,9 @@
 <body>
 
 
-
-<div class="apporange">
-    <%= image_tag '/images/logo.png',class:'applogo'%>
+<!-- <div class="all"> -->
+<!-- <div class="wrapper" > -->
+    <%= image_tag '/images/hello human-logo.png',class:'applogo'%>
 
 	
 	<header>
@@ -19,25 +19,28 @@
 		<ul>
 		  <% unless user_signed_in? %>
 			<li><%= link_to '新規登録',new_user_registration_path,class:'backclear' %></li>
-			<li><%= link_to 'ログイン',new_user_session_path,class:'backclear' %></li>
+			<li><%= link_to 'login',new_user_session_path,class:'backclear' %></li>
 			<li><%= link_to 'facebook',user_omniauth_authorize_path(:facebook)%></li>
 			<li><%= link_to 'twitter',user_omniauth_authorize_path(:twitter)%></li>
           <% else %>
-			<li><%= link_to 'ログアウト',destroy_user_session_path ,method: :delete ,class:'backclear'%></li>
+			<li><%= link_to 'logout',destroy_user_session_path ,method: :delete ,class:'backclear'%></li>
 			<li><%= link_to '新規投稿',new_note_path ,class:'backclear'%></li>
-			<li><%= link_to 'マイページ',usershow_path(current_user.id),class:'backclear' %></li>
-			<li><%= link_to 'Q&A',questions_path %></li>
+			<li><%= link_to 'mypage',usershow_path(current_user.id),class:'backclear' %></li>
+			<li><%= link_to 'Q&A',questions_path,class:'backclear' %></li>
 		  <% end %>
 			
 		</ul>
 	</header>
-	
+	<!-- <h1>PETS</h1>
+	 -->
 
 	<div class="appcontent">
 		<%= yield %>
 	</div>
-</div>
-
+<!-- </div>
+	<div class="content">
+	</div>
+</div> -->
 
 </body>
 </html>
