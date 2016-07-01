@@ -5,6 +5,13 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all
+    @title = 'ハロー一覧'
+  end
+  def hello_index
+    @user = User.find(params[:user_id])
+    @notes = @user.like_notes
+    @title = 'お気に入りハロー'
+    render :index
   end
 
   # GET /notes/1

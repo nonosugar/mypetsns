@@ -1,20 +1,19 @@
-<div class="pet_form">
   <%= form_for(@pet) do |f| %>
     
     <div class="field form-group">
-      <%= f.label :名前 %><br>
+      <%= f.label :名前 ,class:'p_label'%><br>
       <%= f.text_field :name,class:'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :ペットの特徴 %><br>
+      <%= f.label :ペットの特徴 ,class:'p_label' %><br>
       <%= f.text_field :pettype ,class:'form-control'%>
     </div>
     <div class="field form-group">
-      <%= f.label :一言 %><br>
+      <%= f.label :一言 ,class:'p_label' %><br>
       <%= f.text_area :phrase,class:'form-control' %>
     </div>
     <div class="field form-group">
-      <%= f.label :年齢 %><br>
+      <%= f.label :年齢 ,class:'p_label' %><br>
       <%= f.number_field :age,class:'form-control' %>
     </div>
 
@@ -22,7 +21,6 @@
   　　<%= f.file_field :image %>
     
     <div class="actions">
-      <%= f.submit class:'btn btn-success' %>
+      <%= f.submit class:'btn btn-success b_pad' %>
     </div>
   <% end %>
-</div>  

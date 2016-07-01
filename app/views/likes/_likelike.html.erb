@@ -1,5 +1,7 @@
 <% if !current_user.likes.find_by(note_id:note.id)%>
-  <%= link_to 'いいね', likescreate_path(note.id), remote:true %>
+  <%= link_to likescreate_path(note.id),remote: true ,class:'ggg' do %>
+    <%= image_tag '/images/goodjob.png' ,class:'good_b'%>
+  <% end %>
 <% else %>
-  <%= link_to 'いいね外す', likesdestroy_path(note.id), method: :delete, remote: true %>
+  <%= link_to 'いいね済み', likesdestroy_path(note.id), class:'btn btn-warning',method: :delete, remote: true %>
 <% end %>

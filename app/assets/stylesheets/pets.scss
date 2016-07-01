@@ -2,8 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pet_form{
-	width: 600px;
-	height: 600px;
-	margin: 0 auto;
+
+.b_pad{
+	margin-top: 20px;
+}
+.pet_form p{
+	font-size: 20px;
+	padding-top: 30px;
+}
+.p_show:hover{
+    text-decoration: none;
+    background: none;
+}
+.pet_form span{
+	color: #444444;
 }
