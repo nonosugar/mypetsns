@@ -91,7 +91,7 @@ header li{
 header li:hover{
 	background: none;
 	color: chocolate;
-	border-bottom: 5px solid chocolate;
+	border-bottom: 5px solid #00FF00;
 }
 header .backclear{
 	background: none;
@@ -100,14 +100,14 @@ header .backclear{
 	
 }
 header .backclear:hover{
-	color: chocolate;
+	color: #00FF00;
 }
 
 
 .field{
 	width: 600px;
 	margin-top: 50px;
-}
+}/*
 .form_all{
 	width: 700px;
     box-shadow: 5px 5px skyblue;
@@ -118,7 +118,7 @@ header .backclear:hover{
 
 
 
-}
+}*/
 
 .content{
 	background: chocolate;
@@ -138,4 +138,66 @@ header .backclear:hover{
 	background-color:  #FF9966;
 	color: white;
 }
+.pet_form{
+	background-color: #006600;
+	position: relative;
+	top: 100px;
+	width: 800px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 5px solid #00FF00;
+	padding: 30px;
+	color: white;
+	font-family:HiraMinPro-W6;
+}
+.pet_form h2{
+	padding: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-shadow: 5px 5px white;
+	text-shadow: 1px 1px gray;
+}
+.pet_form .field{
+	font-size: 20px;
+	
+}
+.p_label{
+    border-bottom: 6px solid #00FF00;
+}
+.form_color{
+	color: black;
+}
+.comment_font{
+	border-top: 2px dotted #00FF00;
+}
+.comment_images{
+	width: 50px;
+	height: 50px;
+}
+.good_b{
+	width: 30px;
+	height: 30px;
+}
+.ggg:hover{
+	background: none;
+}
+.p_images{
+	height: 100px;
+	width: 100px;
+}
+.p_area{
+	border-top: 2px dotted #00FF00;
+}
+.u_note_border{
+	border-top: 2px dotted #00FF00;
+}
+.pet_form .font_white{
+	color:white;
+}
+.pet_form .font_white:hover{
+	background:none;
+	color: #BBFFFF; 
+	text-decoration: none;
+}
+
 
