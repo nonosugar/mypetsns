@@ -119,12 +119,6 @@ header .backclear:hover{
 	margin-top: 30px;
 }
 
-.message h1{
-	color: white;
-	text-align: center;
-	line-height: 250px;
-	
-}
 .login_form{
 	margin: 0 auto;
 	position: relative;
