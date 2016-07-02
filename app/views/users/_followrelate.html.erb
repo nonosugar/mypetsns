@@ -1,5 +1,7 @@
 <% unless current_user.relationships.find_by(followed_id:user.id) %>
-  <%= link_to 'フォローする', relationsave_path(user.id), remote: true ,class:'btn btn-info'%>
+  <%= link_to relationsave_path(user.id), remote: true ,class:'btn btn-info' do %>
+   <%= image_tag '/images/human1.png',class:'follow_images' %>
+  <% end %>
 <% else %>
   <%= link_to 'フォロー外す', relationdestroy_path(user.id), method: :delete, remote: true ,class:'btn btn-default'%>
 <% end %>

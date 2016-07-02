@@ -200,4 +200,17 @@ header .backclear:hover{
 	text-decoration: none;
 }
 
+header li .font_white{
+	color:white;
+}
+header li .font_white:hover{
+	background:none;
+	color: #BBFFFF; 
+	text-decoration: none;
+}
+.follow_images{
+	width: 20px;
+	height: 20px;
+}
+
 

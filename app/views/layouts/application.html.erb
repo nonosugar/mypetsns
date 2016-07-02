@@ -11,7 +11,9 @@
 
 <!-- <div class="all"> -->
 <!-- <div class="wrapper" > -->
+  <%= link_to root_path do %>
     <%= image_tag '/images/hello human-logo.png',class:'applogo'%>
+  <% end %>  
 
 	
 	<header>
@@ -20,8 +22,8 @@
 		  <% unless user_signed_in? %>
 			<li><%= link_to '新規登録',new_user_registration_path,class:'backclear' %></li>
 			<li><%= link_to 'login',new_user_session_path,class:'backclear' %></li>
-			<li><%= link_to 'facebook',user_omniauth_authorize_path(:facebook)%></li>
-			<li><%= link_to 'twitter',user_omniauth_authorize_path(:twitter)%></li>
+			<li><%= link_to 'facebook',user_omniauth_authorize_path(:facebook),class:'backclear' %></li>
+			<li><%= link_to 'twitter',user_omniauth_authorize_path(:twitter),class:'backclear'%></li>
           <% else %>
 			<li><%= link_to 'logout',destroy_user_session_path ,method: :delete ,class:'backclear'%></li>
 			<li><%= link_to 'ハローする',new_note_path ,class:'backclear'%></li>
