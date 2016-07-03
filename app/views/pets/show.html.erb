@@ -1,9 +1,9 @@
 <div class="pet_form">
 <h2>マイペットページ</h2>
 
-<p>飼い主名：<%= link_to @pet.user.name,usershow_path(@pet.user.id),class:'p_show' %></p><br>
+<p>飼い主名：<%= link_to @pet.user.name,usershow_path(@pet.user.id),class:'p_show font_white' %></p><br>
 
-<p>名前：<span><%= @pet.name %></span></p><br>
+<p>名前：<span class="font_white"><%= @pet.name %></span></p><br>
 
 <p> <% if @pet.image? %>
       <%= image_tag @pet.image.thumb.url,class:'user_images img-thumbnail' %>
@@ -11,10 +11,10 @@
       <%= image_tag '/images/logo (2).png',class:'user_images img-thumbnail'%>
     <% end %></p><br>
 
-<p>年齢：<span><%= @pet.age %></span></p><br>
+<p>年齢：<span class="font_white"><%= @pet.age %></span></p><br>
 
-<p>タイプ：<span><%= @pet.pettype%></span></p><br>
+<p>タイプ：<span class="font_white"><%= @pet.pettype%></span></p><br>
 
-<p>一言：<span><%= @pet.phrase %></span></p><br>
+<p>一言：<span class="font_white"><%= @pet.phrase %></span></p><br>
 
 </div>

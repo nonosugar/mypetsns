@@ -49,9 +49,6 @@ body{
 }
 
 .applogo{
-
-
-
 	background-color: #FF9966;
 	display: block;
 	position: fixed;
@@ -65,19 +62,14 @@ body{
 }
 
 header{
-	
 	color: black;
 	position: fixed;
-	/*background-color: white;*/
 	width: 1000px;
 	margin-left: 350px;
 	margin-top: 0px;
 	z-index: 6;
 	color: white;
 	font-family: arial black;
-}
-header ul{
-	 
 }
 header li{
 	list-style: none;
@@ -154,7 +146,7 @@ header .backclear:hover{
 	padding: 10px;
 	border: 1px solid white;
 	border-radius: 5px;
-	box-shadow: 5px 5px white;
+	box-shadow: 2px 2px white;
 	text-shadow: 1px 1px gray;
 }
 .pet_form .field{
@@ -199,6 +191,15 @@ header .backclear:hover{
 	color: #BBFFFF; 
 	text-decoration: none;
 }
+.pet_form .question_show_u .font_white{
+	color:white;
+}
+.pet_form .question_show_u .font_white:hover{
+	background:none;
+	color: #BBFFFF; 
+	text-decoration: none;
+}
+
 
 header li .font_white{
 	color:white;
@@ -208,6 +209,7 @@ header li .font_white:hover{
 	color: #BBFFFF; 
 	text-decoration: none;
 }
+
 .follow_images{
 	width: 20px;
 	height: 20px;

@@ -21,8 +21,6 @@ gem 'rails', '4.2.6'
 
 # Herokuの本番(production)環境ではPostgresqlを使用する
 gem 'sqlite3', :group => [:development, :test]
-gem 'pg', :group => [:production]
-gem "rails_12factor", group: :production
 
 # コメントアウト
 gem 'therubyracer', platforms: :ruby
