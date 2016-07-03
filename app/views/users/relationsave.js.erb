@@ -1,1 +1,3 @@
 $('.follow').html('<%= escape_javascript(render("users/followrelate",user:@user)) %>');
+$('.followed_count').html('フォロー<%= @user.followed_users.count %>');
+$('.following_count').html('フォロアー<%= @user.followers.count %>');

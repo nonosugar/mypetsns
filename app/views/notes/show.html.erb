@@ -1,53 +1,60 @@
-<p id="notice"><%= notice %></p>
+<div class="pet_form">
+  <p class="note_show_title">
+    <%= @note.title %>
+  </p>
+  <div id = "like_link">
+    <%= render 'likes/likelike', note:@note %>
+  </div>
 
-<p>
-  <strong>記事タイトル:</strong>
-  <%= @note.title %>
-</p>
-<div id = "like_link">
-  <%= render 'likes/likelike', note:@note %>
-</div>
+  <div id = "likecount" class="btn btn-info">
+    <%= link_to @note.likes.count,user_index_path(@note.id) %>
+  </div>
 
-<div id = "likecount">
-  <%= @note.likes.count %>
-</div>
+  <p>
+    <strong>投稿者:</strong>
+    <%= link_to @note.user.name,usershow_path(@note.user_id),class:'font_white' %>
+  </p>
 
-<p>
-  <strong>投稿者:</strong>
-  <%= @note.user_id %>
-</p>
+  <p>
+    <strong>:</strong>
+    <%= @note.content %>
+  </p>
 
-<p>
-  <strong>内容:</strong>
-  <%= @note.content %>
-</p>
+  <p>
+     <%= image_tag @note.image.thumb.url,class:'img-thumbnail' %>
+  </p>
 
-<p>
-  <strong>写真:</strong>
-   <%= image_tag @note.image.thumb.url %>
-
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
-
-
-<%= form_tag comment_path(@note.id) do %>
   
-  コメント
-  <textarea name="content" required="required"></textarea>
-  <input type="submit" value="投稿する" >
-<% end %>
 
 
-<% if @note.comments %>
-<% @note.comments.each do |comment| %>
-   <%= comment.content %>
-   <%= link_to '削除', commentsdes_path(comment.id), method: :delete %>
-   <% end %>
-<% end %>
+  <%= form_tag comment_path(@note.id) do %>
+    <div class="form-group">
+    コメント
+    <textarea name="content" required="required" class="form_color form-control"></textarea>
+    <input type="submit" value="コメントする" class="form_color">
+    </div>
+  <% end %>
 
 
+  <% if @note.comments %>
+     <% @note.comments.each do |comment| %>
+      <div class="comment_font">
+       <p>
+       <% if comment.user.image? %>
+       <%= image_tag comment.user.image.thumb.url,class:'comment_images img-thumbnail' %>
+       <% else %>
+       <%= image_tag '/images/logo (2).png',class:'comment_images img-thumbnail'%>
+       <% end %>
+       <%= link_to comment.user.name,usershow_path(comment.user_id),class:'font_white' %></p>
+       <p><%= comment.content %></p>
+       </div>
+       <% if comment.user_id == current_user.id %>
+        <%= link_to '削除', commentsdes_path(comment.id), method: :delete %><br>
+       <% end %>
+     <% end %>
+  <% end %>
+
+</div>
 
 
 

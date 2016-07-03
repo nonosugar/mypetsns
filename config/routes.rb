@@ -9,10 +9,19 @@ Rails.application.routes.draw do
   get 'users/show/:id'=> 'users#show',as:'usershow'
 
   get 'home/top'
+
+
+  get 'notes/hello_index/:user_id'=>'notes#hello_index',as:'hello_index'
   
 
   devise_for :users, path_names: { sign_in: "login", sign_out: "logout"},
     controllers: { omniauth_callbacks: "omniauth_callbacks" }
+
+  get 'users/index/:note_id'=>'users#index',as:'user_index'
+
+  get 'users/follow_index/:user_id'=>'users#follow_index',as:'user_follow_index'
+
+  get 'users/follower_index/:user_id'=>'users#follower_index',as:'user_follower_index'
   
  root 'home#top'
 
