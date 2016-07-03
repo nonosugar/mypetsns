@@ -12,7 +12,7 @@
 
 <p class="question_show_u">
   <strong>投稿者:</strong>
-  <%= link_to @question.user.name,usershow_path(@question.user_id) %>
+  <%= link_to @question.user.name,usershow_path(@question.user_id) ,class:'font_white' %>
 </p>
 
 
@@ -38,12 +38,12 @@
 <% end %>
 </div>
 
-<div class="answer_area">
+<div class="answer_area form-group">
 <h2>アンサー一覧</h2>
 <%= form_tag answers_create_path(@question.id) do %>
   
   
-  <textarea name="content" class="answer_form"></textarea>
+  <textarea name="content" class="answer_form form-control"></textarea>
 
   <input type="submit" value="アンサーする" class="btn btn-success">
 <% end %>
@@ -55,9 +55,10 @@
       <%= image_tag @question.user.image.thumb.url,class:'answer_zone_image img-thumbnail' %>
     <% else %>
       <%= image_tag '/images/logo (2).png',class:'answer_zone_image img-thumbnail'%>
-    <% end %><%= answer.user.name %><br><%= answer.content %></p>
+    <% end %>
+     <p class="font-white"><%= answer.user.name %><br><%= answer.content %></p></p>
       <% if @question.user_id == current_user.id&&@question.best_a==nil %>
-        <%= link_to 'bestアンサーに選ぶ',best_answer_path(answer.id)%>
+        <%= link_to 'bestアンサーに選ぶ',best_answer_path(answer.id),class:'btn btn-success' %>
       <% end %>
       <%= link_to '削除',answers_destroy_path(answer.id),method: :delete%><br>
       </div>

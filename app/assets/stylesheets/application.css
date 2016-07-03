@@ -67,9 +67,6 @@ header{
 	color: white;
 	font-family: arial black;
 }
-header ul{
-	 
-}
 header li{
 	list-style: none;
 	float: right;
@@ -139,17 +136,13 @@ header .backclear:hover{
 	width: 800px;
 	margin: 0 auto;
 	border-radius: 10px;
-	border: 5px solid #00FF00;
 	padding: 30px;
 	color: white;
-	font-family:HiraMinPro-W6;
+	font-family:'Hiragino Maru Gothic ProN';
 }
 .pet_form h2{
 	padding: 10px;
-	border: 1px solid white;
-	border-radius: 5px;
-	box-shadow: 5px 5px white;
-	text-shadow: 1px 1px gray;
+
 }
 .pet_form .field{
 	font-size: 20px;
@@ -193,6 +186,15 @@ header .backclear:hover{
 	color: #BBFFFF; 
 	text-decoration: none;
 }
+.pet_form .question_show_u .font_white{
+	color:white;
+}
+.pet_form .question_show_u .font_white:hover{
+	background:none;
+	color: #BBFFFF; 
+	text-decoration: none;
+}
+
 
 header li .font_white{
 	color:white;
@@ -202,6 +204,7 @@ header li .font_white:hover{
 	color: #BBFFFF; 
 	text-decoration: none;
 }
+
 .follow_images{
 	width: 20px;
 	height: 20px;

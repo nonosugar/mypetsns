@@ -9,8 +9,8 @@
   <div class="index_border">
      <% @questions.each do |question| %>
        <div class="index_border">
-        <p class="q_title"><%= link_to question.title ,question_path(question.id),class:'font_white hover_none'%></p>
-        <p><%= link_to question.user.name,usershow_path(question.user_id) ,class:'font_white hover_none'%></p><br>
+        <h3 class="q_title"><%= link_to question.title ,question_path(question.id),class:'font_white hover_none'%></h3>
+        <p><%= link_to "投稿者：#{question.user.name}",usershow_path(question.user_id) ,class:'font_white hover_none pull-right'%></p><br>
         </div> 
       <% end %>   
 
