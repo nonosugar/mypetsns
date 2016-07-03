@@ -1,0 +1,31 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.user_show{
+	background-color: white;
+	width: 80%;
+	margin: 0 auto;
+	border-radius: 10px;
+
+	padding: 20px; 
+	margin-top: 20px; 
+}
+.user_images{
+	width: 150px;
+	height: 200px;
+}
+.user_index_images{
+	width: 50px;
+	height: 50px;
+}
+.user_index_border{
+	border-top: 2px dotted  #00FF00;
+}
+.pet_form p{
+	padding-top: 10px;
+}
+#follow{
+	margin-top: 20px;
+}

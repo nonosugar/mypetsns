@@ -1,0 +1,14 @@
+<div class="pet_form">
+  <h1><%= @title %></h1>
+<% @notes.each do |note| %>
+  <div class="u_note_border">
+    <p><% if note.image? %>
+      <%= image_tag note.image.thumb.url,class:'p_images img-thumbnail' %>
+    <% else %>
+      <%= image_tag '/images/cool_cat.jpg',class:'p_images img-thumbnail'%>
+    <% end %><%= link_to note.title, note_path(note.id),class:'font_white' %>
+    <br><%= link_to note.user.name ,usershow_path(note.user.id),class:'font_white'%></p>
+   </div>
+<% end %>
+</div>
+ 

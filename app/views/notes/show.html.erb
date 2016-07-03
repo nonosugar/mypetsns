@@ -1,0 +1,64 @@
+<div class="pet_form">
+  <p class="note_show_title">
+    <%= @note.title %>
+  </p>
+  <div id = "like_link">
+    <%= render 'likes/likelike', note:@note %>
+  </div>
+
+  <div id = "likecount" class="btn btn-info">
+    <%= link_to @note.likes.count,user_index_path(@note.id) %>
+  </div>
+
+  <p>
+    <strong>投稿者:</strong>
+    <%= link_to @note.user.name,usershow_path(@note.user_id),class:'font_white' %>
+  </p>
+
+  <p>
+    <strong>:</strong>
+    <%= @note.content %>
+  </p>
+
+  <p>
+     <%= image_tag @note.image.thumb.url,class:'img-thumbnail' %>
+  </p>
+
+  
+
+
+  <%= form_tag comment_path(@note.id) do %>
+    <div class="form-group">
+    コメント
+    <textarea name="content" required="required" class="form_color form-control"></textarea>
+    <input type="submit" value="コメントする" class="form_color">
+    </div>
+  <% end %>
+
+
+  <% if @note.comments %>
+     <% @note.comments.each do |comment| %>
+      <div class="comment_font">
+       <p>
+       <% if comment.user.image? %>
+       <%= image_tag comment.user.image.thumb.url,class:'comment_images img-thumbnail' %>
+       <% else %>
+       <%= image_tag '/images/logo (2).png',class:'comment_images img-thumbnail'%>
+       <% end %>
+       <%= link_to comment.user.name,usershow_path(comment.user_id),class:'font_white' %></p>
+       <p><%= comment.content %></p>
+       </div>
+       <% if comment.user_id == current_user.id %>
+        <%= link_to '削除', commentsdes_path(comment.id), method: :delete %><br>
+       <% end %>
+     <% end %>
+  <% end %>
+
+</div>
+
+
+
+
+
+
+

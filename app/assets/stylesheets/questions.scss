@@ -1,0 +1,103 @@
+// Place all the styles related to the Questions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.answer_area{
+	margin-top: 200px;
+	border-top: 2px dotted green;
+}
+.q_index{
+	background-color: #006600;
+	position: relative;
+	top: 100px;
+	width: 800px;
+	margin: 0 auto;
+	border-radius: 10px;
+	border: 5px solid green;
+	padding: 30px;
+	color: white;
+	font-family: serif;
+}
+.q_index h1{
+	padding: 10px;
+	margin-bottom: 100px;
+	border: 1px solid white;
+	border-radius: 5px;
+	box-shadow: 5px 5px white;
+}
+.index_border{
+	border-bottom: 2px solid green;
+	padding-bottom: 10px;
+
+}
+.question_create{
+	float: right;
+	position: relative;
+	top: -50px;
+	color: white;
+}
+.hover_none{
+	color: white;
+}
+.hover_none:hover{
+	background: none;
+	text-decoration: none;
+}
+.question_show_u{
+	font-size: 15px;
+
+}
+
+.question_show_c{
+	font-size: 20px;
+}
+.question_show_t{
+	font-size: 30px;
+}
+.q_new{
+	width: 600px;
+	margin: 0 auto;
+
+}
+.answer_form{
+	width: 500px;
+	height: 150px;
+	color: black;
+}
+.answer_border{
+	border-top: 2px solid green;
+	font-size: 20px;
+	padding: 20px;
+}
+.answer_zone_image{
+	width: 50px;
+	height: 50px;
+}
+.pet_form .q_head{
+	margin-bottom: 40px;
+}
+.star_size{
+	width: 30px;
+	height: 30px;
+	position: relative;
+	top: -30px;
+	left: -10px;
+}
+.answer_image_b{
+	line-height: 30px;
+	color: skyblue;
+}
+.answer_image_b span{
+	border-bottom: 2px solid #A4C6FF;
+	color: skyblue;
+}
+.b_answer_zone{
+	border-radius: 5px;  
+	background-color: #FFFF00;
+	margin-top: 100px;
+}
+.a_content{
+	color: black;
+	font-size: 15px;
+}
+

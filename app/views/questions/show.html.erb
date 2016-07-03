@@ -1,0 +1,68 @@
+
+
+<div class="pet_form">
+
+
+<p class="question_show_t">
+  <strong>:</strong>
+  <%= @question.title %>
+</p>
+
+
+
+<p class="question_show_u">
+  <strong>投稿者:</strong>
+  <%= link_to @question.user.name,usershow_path(@question.user_id) ,class:'font_white' %>
+</p>
+
+
+
+<%= image_tag @question.image.thumb.url,class:'img-thumbnail' %><br>
+
+<p class="question_show_c">
+  <strong>内容:</strong>
+  <%= @question.content %>
+</p>
+
+<div class="b_answer_zone">
+<% unless @question.best_a.nil? %>
+   <p class="answer_image_b"><%= image_tag '/images/star1.png' ,class:'star_size'%><span>BEST ANSWER！</span></p>
+   <p class="a_content"><% if @question.user.image? %>
+      <%= image_tag @question.user.image.thumb.url,class:'answer_zone_image img-thumbnail' %>
+    <% else %>
+      <%= image_tag '/images/logo (2).png',class:'answer_zone_image img-thumbnail'%>
+    <% end %><%= @answer.user.name %><br><%= @answer.content %></p>
+   <% if current_user == @question.user %><br>
+   <%= link_to 'ベストアンサーを外す',best_destroy_path(@answer.id)%>
+   <% end %>
+<% end %>
+</div>
+
+<div class="answer_area form-group">
+<h2>アンサー一覧</h2>
+<%= form_tag answers_create_path(@question.id) do %>
+  
+  
+  <textarea name="content" class="answer_form form-control"></textarea>
+
+  <input type="submit" value="アンサーする" class="btn btn-success">
+<% end %>
+
+  <div class="answer_zone">
+  	<% @question.answers.each do |answer|%>
+     <div class="answer_border">
+  	  <p><% if @question.user.image? %>
+      <%= image_tag @question.user.image.thumb.url,class:'answer_zone_image img-thumbnail' %>
+    <% else %>
+      <%= image_tag '/images/logo (2).png',class:'answer_zone_image img-thumbnail'%>
+    <% end %>
+     <p class="font-white"><%= answer.user.name %><br><%= answer.content %></p></p>
+      <% if @question.user_id == current_user.id&&@question.best_a==nil %>
+        <%= link_to 'bestアンサーに選ぶ',best_answer_path(answer.id),class:'btn btn-success' %>
+      <% end %>
+      <%= link_to '削除',answers_destroy_path(answer.id),method: :delete%><br>
+      </div>
+  	<% end %>
+  </div>
+</div>
+</div>

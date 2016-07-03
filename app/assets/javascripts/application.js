@@ -12,5 +12,39 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
+//= require jquery.turbolinks
 //= require_tree .
+//= require jquery.bxslider.js
+//= require jquery.bxslider.min.js
+
+
+$(function(){
+	$('header').hover(function(){
+		$('.homeimage').animate({'top':'-200px'});
+	});
+	$('.homeimage').hover(function(){
+		$(this).animate({'left':'1900px'}),
+		setTimeout(function(){
+    $('.homeimage').fadeOut();
+		},1000);
+
+	});
+
+    $(document).on('page:change', function(event) {
+	  setTimeout(function(){
+	    $('.hometopload').fadeOut(2000);
+	      
+	  },2000);
+	});
+
+	$(document).ready(function(){
+	  $('.bxslider').bxSlider({
+	  	auto:true,
+	  	mode: 'fade'
+	  });
+	   
+	  });
+	
+});
